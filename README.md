@@ -1,24 +1,25 @@
-# Modification of sansroot's Hyprland rice
+# Under Construction
+A modification of sansroot's [hypr-dots](https://github.com/sansroot/hypr-dots)
 
 #### Waybar:
 ```
 sudo pacman -S waybar
 ```
-#### Zsh: 
+#### Zsh:
 ```
-sudo pacman -S zsh 
+sudo pacman -S zsh
 ```
-#### Hyprland: 
+#### Hyprland:
 ```
-sudo pacman -S hyprland 
+sudo pacman -S hyprland
 ```
-#### Hyprshot: 
+#### Hyprshot:
 ```
-yay -S hyprshot 
+yay -S hyprshot
 ```
-#### Hyprlock: 
+#### Hyprlock:
 ```
-sudo pacman -S hyprlock 
+sudo pacman -S hyprlock
 ```
 #### Hypridle:
 ```
@@ -28,9 +29,9 @@ sudo pacman -S hypridle
 ```
 yay -S waypaper
 ```
-#### Swww: 
+#### Swww:
 ```
-sudo pacman -S swww 
+sudo pacman -S swww
 ```
 #### Flavours:
 ```
@@ -40,19 +41,19 @@ yay -S flavours
 ```
 sudo pacman -S swaync
 ```
-#### Kitty: 
+#### Kitty:
 ```
-sudo pacman -S kitty 
+sudo pacman -S kitty
 ```
-#### Nerd-fonts and Awesome-fonts: 
+#### Nerd-fonts and Awesome-fonts:
 ```
-sudo pacman -S awesome-terminal-fonts otf-font-awesome ttf-font-awesome ttf-jetbrains-mono ttf-jetbrains-mono-nerd 
+sudo pacman -S awesome-terminal-fonts otf-font-awesome ttf-font-awesome ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 ```
-#### Fastfetch: 
+#### Fastfetch:
 ```
-sudo pacman -S fastfetch 
+sudo pacman -S fastfetch
 ```
-#### Oh-my-ZSH: 
+#### Oh-my-ZSH:
 
 <a>https://github.com/ohmyzsh/ohmyzsh</a>
 
@@ -66,7 +67,7 @@ sudo pacman -S fastfetch
 ## Rofi
 #### Rofi:
   ```
-  sudo pacman -S rofi-wayland 
+  sudo pacman -S rofi-wayland
   ```
 #### Rofi fonts:
 
@@ -75,38 +76,19 @@ sudo pacman -S fastfetch
 ## 2. Dotfiles installation
 #### Paste it in your terminal:
 ```
-git clone -b mauve https://github.com/sansroot/hypr-dots
-cd hypr-dots
+git clone https://github.com/gn6me/hypr-dotfiles
+cd hypr-dotfiles
 sudo chmod -R 777 *
 bash ./dotfiles_installer.sh
 ```
 
-  
-
-## 3. Optional
-
-#### Nvim: 
-```
-sudo pacman -S neovim 
-```
-#### NVChad: 
-
-<a>https://github.com/NvChad/NvChad</a>
-
-
-
-
 ## 4. To help you
 
-#### Nwg-look (Gtk theme and cursor apply): 
+#### Nwg-look (Gtk theme and cursor apply):
 ```
 sudo pacman -S nwg-look
 ```
-#### Apple Keyboard native path to configure key layout: 
-```
-/sys/bus/hid/drivers/apple/module/parameters
-```
-#### Screen share in hyprland: 
+#### Screen share in hyprland:
 <a>https://gist.github.com/brunoanc/2dea6ddf6974ba4e5d26c3139ffb7580</a>
 
 #### Keybinds
@@ -158,13 +140,3 @@ sudo pacman -S nwg-look
 
 
 </details>
-
-
-
-![mauve](https://github.com/user-attachments/assets/86803614-aca6-4520-ba7d-705b246d8432)
-
-
-
-
-
-
