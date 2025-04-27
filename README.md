@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/428854bd-558e-4501-9b28-361b4d92aa3a)
-
 # hyprland dotfiles
 
 Includes waybar, swaync, hyprlock/hypridle, swww/waypaper, hyprshot and rofi
