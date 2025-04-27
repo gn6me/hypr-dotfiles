@@ -5,11 +5,11 @@
 Includes waybar, swaync, hyprlock/hypridle, swww/waypaper, hyprshot and rofi
 
 ### Needed packages:
-kitty, waybar, waypaper, swww, hyprlock, hypridle, rofi-wayland, swaync, hyprshot, zen-browser, hyprpolkitagent
+```kitty, waybar, waypaper, swww, hyprlock, hypridle, rofi-wayland, swaync, hyprshot, zen-browser, hyprpolkitagent```
 
-waybar, swww, hyprlock, hypridle, rofi-wayland, swaync, hyprpolkitagent are the main packages needed.
+```waybar, swww, hyprlock, hypridle, rofi-wayland, swaync, hyprpolkitagent``` are the main packages needed.
 
-kitty, zen-browser, zed, hyprshot and thunar can be changed out for your preferred package. Just make sure to update the shortcuts within ```keybindings.conf``` file.
+```kitty, zen-browser, zed, hyprshot and thunar``` can be changed out for your preferred package. Just make sure to update the shortcuts within ```keybindings.conf``` file.
 
 ### Fonts
 
