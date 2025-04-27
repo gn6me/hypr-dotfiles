@@ -1,0 +1,273 @@
+@import "colors-waybar.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetbrainsMono Nerd Font";
+  font-size: 12px;
+  min-height: 10px;
+}
+
+window#waybar {
+  padding: 0;
+  margin: 0;
+  border: 0px solid transparent;
+  border-radius: 0;
+  background: transparent;
+}
+
+window > box {
+  padding: 0;
+  margin: 0;
+  background: alpha(@background, 1);
+}
+
+/***********************************/
+/********** LEFT MODULES **********/
+/*********************************/
+
+#idle_inhibitor {
+  opacity: 1;
+  margin: 0;
+  margin-right: 10px;
+  padding: 0 18px 0 15px;
+  border-radius: 7px;
+  transition: none;
+  background: @background;
+  color: @red;
+  transition: 0.3s;
+}
+
+#idle_inhibitor.activated {
+  color: @green;
+}
+
+#idle_inhibitor.deactivated {
+  color: @foreground;
+}
+
+#idle_inhibitor.deactivated:hover {
+  color: @green;
+}
+
+#window {
+  opacity: 1;
+  margin: 0;
+  padding: 0px 20px;
+  background: none;
+  color: @color7;
+  transition: 0.3s;
+}
+
+#taskbar button {
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+#taskbar button:hover {
+  background: none;
+}
+
+#taskbar button.active {
+  background: #89b4fa;
+}
+
+/*************************************/
+/********** CENTER MODULES **********/
+/***********************************/
+
+#workspaces {
+  background: @background;
+  opacity: 1;
+  margin: 0;
+  border-radius: 0;
+  border-top: none;
+  color: @color7;
+  transition: 0.3s;
+}
+
+#workspaces button {
+  margin: 0;
+  border-radius: 0;
+  border-top: none;
+  color: @blue;
+  background: none;
+  transition: 0.3s;
+}
+
+#workspaces button.visible {
+    color: @blue;
+}
+#workspaces button.active, #workspaces button:hover, #workspaces button.active:hover {
+  color: @background;
+  background: @blue;
+}
+#workspaces button.empty {
+    color: @foreground;
+}
+
+#clock {
+  opacity: 1;
+  margin: 0;
+  margin-right: 5px;
+  padding: 0 20px;
+  margin-bottom: 0px;
+  border-radius: 7px;
+  background: @background;
+  color: @magenta;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#mpris {
+  padding: 5px 10px;
+  color: alpha(@foreground, 0.9);
+  background: @background;
+  font-size: 10px;
+  border-radius: 7px;
+  transition: all 0.5s linear;
+  /*background: linear-gradient(-45deg, @color1, @color14, @color0, @color11);*/
+}
+
+#mpris.playing {
+  color: @green;
+}
+
+#mpris.paused {
+  color: @red;
+}
+
+/************************************/
+/********** RIGHT MODULES **********/
+/**********************************/
+
+#custom-updates {
+  padding: 0 5px 0 10px;
+  margin: 0;
+  margin-right: 5px;
+  padding-right: 10px;
+  border-radius: 7px;
+  background: @background;
+  color: @magenta;
+}
+
+#tray {
+  background: @background;
+  opacity: 1;
+  border-radius: 7px;
+  margin: 0;
+  margin-right: 5px;
+  padding: 0 15px;
+  margin-bottom: 0px;
+  color: #2e3c49;
+  transition: 0.3s;
+}
+
+#tray menu {
+  margin-top: 0;
+  margin-left: 0;
+  padding: 0;
+  margin-bottom: 0px;
+  border-radius: 5px;
+  transition: none;
+  background: alpha(@color0, 0.3);
+  color: #89b4fa;
+  transition: 0.3s;
+}
+
+#cpu {
+  margin: 0;
+  padding: 0 10px;
+  margin-bottom: 0px;
+  border-radius: 7px 0 0 7px;
+  background: @background;
+  color: @yellow;
+  transition: 0.3s;
+}
+
+#temperature {
+  opacity: 1;
+  margin: 0;
+  padding: 0 10px;
+  margin-bottom: 0px;
+  border-radius: 0;
+  background: @background;
+  color: @red;
+  transition: 0.3s;
+}
+
+/*#cpu:hover {
+    color: #1e1d2f;
+    background: #89b4fa;
+}*/
+
+#memory {
+  opacity: 1;
+  margin: 0;
+  padding: 0 10px;
+  border-radius: 0;
+  background: @background;
+  color: @cyan;
+  transition: 0.3s;
+}
+
+/*#memory:hover {
+    color: #1e1d2f;
+    background: #89b4fa;
+}*/
+
+#pulseaudio {
+  opacity: 1;
+  margin: 0;
+  padding: 0px 10px;
+  margin-bottom: 0px;
+  border: 5px solid transparent;
+  border-radius: 0;
+  background: @background;
+  color: @green;
+  transition: 0.3s;
+}
+
+#pulseaudio:hover {
+  color: @blue;
+}
+
+#pulseaudio.muted {
+  color: #f38ba8;
+  background: none;
+  transition: 0.3s;
+}
+
+#pulseaudio.muted:hover {
+  background: #f38ba8;
+  color: #2e3c49;
+}
+
+#power-profiles-daemon {
+  opacity: 1;
+  margin: 0;
+  padding: 0 5px;
+  border-radius: 0;
+  background: @background;
+  color: @red;
+  transition: 0.3s;
+}
+
+#power-profiles-daemon:hover {
+  color: @foreground;
+}
+
+#custom-power {
+  opacity: 1;
+  margin: 0;
+  padding: 0 10px;
+  margin-bottom: 0px;
+  border-radius: 0 7px 7px 0;
+  background: @background;
+  color: @red;
+  transition: 0.3s;
+}
+
+#custom-power:hover {
+  color: @blue;
+}
