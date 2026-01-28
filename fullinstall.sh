@@ -3,39 +3,18 @@
 echo " "
 echo "Installing packages"
 
-sudo pacman -S yay thunar thunar-volman thunar-archive-plugin tumbler rofi-wayland kitty awesome-terminal-fonts otf-font-awesome ttf-font-awesome ttf-jetbrains-mono ttf-jetbrains-mono-nerd swaync pipewire wireplumber xdg-desktop-portal-hyprland hyprland hyprpolkitagent hypridle hyprlock swww kitty nwg-look hyprpciker --needed
+sudo pacman -S yay thunar thunar-volman thunar-archive-plugin tumbler kitty awesome-terminal-fonts otf-font-awesome ttf-font-awesome ttf-jetbrains-mono ttf-jetbrains-mono-nerd pipewire wireplumber xdg-desktop-portal-hyprland hyprland hyprpolkitagent hypridle hyprlock kitty nwg-look hyprpicker zsh starship timeshift steam wl-clipboard sddm ranger pavucontrol nvidia-open nvidia-utils networkmanager-openvpn netctl neovim fzf flatpak --needed
 
-yay -S hyprshot waypaper zen-browser-bin --noconfirm --needed
-
-git clone --depth=1 https://github.com/adi1090x/rofi.git
-cd rofi
-chmod +x setup.sh
-./setup.sh
-cd ..
+yay -S hyprshot quickshell noctalia-shell zen-browser-bin twintaillauncher-bin vesktop heroic-games-launcher-bin timeshift-autosnap gpu-screen-recorder bibata-cursor-theme --noconfirm --needed
 
 echo " "
 echo "Done!"
 sleep 0.5
 
-read -r -p "Backup current dotfiles? [Y/n] " response
-if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-  echo " "
-  echo "Backing up current dotfiles"
-
-  mkdir ~/dotfiles.bak
-  cp -r ~/.config/. ~/dotfiles.bak/
-  echo "Done!"
-  sleep 0.5
-else
-  echo " "
-  echo "Skipping backup..."
-  sleep 0.5
-fi
-
 echo " "
 echo "Cloning dotfiles..."
 
-cp -r hypr swaync waybar waypaper rofi ~/.config/
+cp -r hypr noctalia ~/.config/
 
 echo "Copying fonts"
 mkdir ~/.fonts
