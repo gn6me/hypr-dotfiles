@@ -1,16 +1,15 @@
 {
   "layer": "top",
   "reload_style_on_change": true,
-  "modules-left": ["idle_inhibitor", "hyprland/workspaces"],
-  "modules-center": ["clock", "mpris"],
+  "modules-left": ["idle_inhibitor", "clock"],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": [
-    "tray",
+    "custom/vpn",
     "custom/updates",
     "cpu",
     "temperature",
     "memory",
     "pulseaudio",
-    "power-profiles-daemon",
     "custom/power",
   ],
   "custom/updates": {
@@ -18,7 +17,7 @@
     "format": "{}",
     "return-type": "json",
     "on-click": "hyprctl dispatch exec 'systemupdate.sh up'",
-    "interval": 86400, //once a days
+    "interval": 3600, //once every hour
     "tooltip": true,
     "signal": 20,
   },
@@ -131,29 +130,37 @@
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "1": "一",
-        "2": "二",
-        "3": "三",
-        "4": "四",
-        "5": "五",
-        "6": "六",
-        "7": "七",
-        "8": "八",
-        "9": "九",
-        "10": "十",
-      "default": "",
+      "default": "",
+      "visible": "",
     },
     "persistent-workspaces": {
-        "HMDI-A-1": [ 1 ],
-        "DP-1": [ 2,3,4,5,6,7,8,9,10 ]
+        "DP-1": [ 1 ],
     },
     "tooltip": false,
     "all-outputs": true,
     "move-to-monitor": true,
   },
-  "persistent-workspaces": {
-    "1": "HMDI-A-1",
-  },
+"network": {
+	"interface": "enp7s0",
+	"format": "{ifname}",
+	"format-wifi": "{essid} ({signalStrength}%) ",
+	"format-ethernet": "",
+	"format-disconnected": "",
+	"tooltip-format": "{ifname}",
+	"tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+	"tooltip-format-ethernet": "{ifname} ",
+	"tooltip-format-disconnected": "Disconnected",
+  "on-click": "kitty -e 'nmtui-connect'",
+	"max-length": 50
+},
+"custom/vpn": {
+"interval": 3,
+"format": "{}",
+"exec": "ip add show | grep -qF tun0 && echo '  Connected' || echo '  Disconnected'",
+"max-length": "100",
+"on-click": "nmcli connection up us.protonvpn.udp",
+"on-click-right": "nmcli connection down us.protonvpn.udp"
+},
   "hyprland/window": {
     "format": "{}",
     "separate-outputs": true,
